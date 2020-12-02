@@ -1,7 +1,6 @@
-#include "utils.h"
+#include "md5-impl.h"
 
 #include <math.h>
-#include <stdlib.h>
 
 const CompVec initVec = {
     0x67452301,
@@ -45,5 +44,3 @@ const int s[64] = {
 };
 
 const uint8_t paddingBlk[64] = {0x80};
-
-int blk2Idx(int blkIdx) { return blkIdx * blkBits / 8; }

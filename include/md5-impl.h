@@ -1,7 +1,8 @@
-#if !defined(UTILS_H)
-#define UTILS_H
+#if !defined(MD5_IMPL_H)
+#define MD5_IMPL_H
 
 #include "md5.h"
+#include "type.h"
 
 extern const CompVec initVec;
 
@@ -19,4 +20,4 @@ extern const int s[64];
 extern const uint8_t paddingBlk[64];
 int blk2Idx(int blkIdx);
 
-#endif  // UTILS_H
+#endif  // MD5_IMPL_H

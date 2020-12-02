@@ -1,11 +1,8 @@
 #include "md5.h"
 
-#include <stdio.h>
 #include <string.h>
 
-#include "utils.h"
-
-int blkBits = 512;
+#include "md5-impl.h"
 
 void md5CompFunc(CompVec cv, const uint8_t *blk);
 void md5LastBlk(CompVec cv, const char *lastBlk, size_t blkCnt);
@@ -59,12 +56,4 @@ void md5LastBlk(CompVec cv, const char *lastBlk, size_t blkCnt) {
         *ptr = msgBits;
         md5CompFunc(cv, &blk[64]);
     }
-}
-
-char *cv2Str(char *msgDigest, const CompVec cv) {
-    const uint8_t *base = (const uint8_t *)cv;
-    for (int i = 0; i < 16; i++) {
-        sprintf(&msgDigest[i << 1], "%02x", base[i]);
-    }
-    return msgDigest;
 }
