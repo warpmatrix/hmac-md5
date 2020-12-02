@@ -8,7 +8,10 @@ const int MAX_LEN = 1000;
 int main(int argc, char const *argv[]) {
     char message[MAX_LEN];
     scanf("%s", message);
-    char hashStr[129];
-    printf("%s\n", md5(hashStr, message));
+    CompVec cv;
+    md5(cv, message);
+    char msgDigest[129];
+    cv2Str(msgDigest, cv);
+    printf("%s\n", msgDigest);
     return 0;
 }

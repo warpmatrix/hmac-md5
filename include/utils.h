@@ -3,11 +3,6 @@
 
 #include "md5.h"
 
-typedef unsigned char uint8_t;
-typedef unsigned int uint32_t;
-typedef unsigned long long int uint64_t;
-
-typedef uint32_t CompVec[4];
 extern const CompVec initVec;
 
 extern uint32_t (*rndFunc[4])(uint32_t b, uint32_t c, uint32_t d);

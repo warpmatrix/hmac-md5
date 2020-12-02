@@ -5,7 +5,7 @@ BUILD_DIR = build
 
 TARGET = $(BIN_DIR)/md5
 SRC = $(wildcard $(SRC_DIR)/*.c)
-INCLUDE = -I ./$(INC_DIR)
+INCLUDE = -I $(INC_DIR)
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 CC = gcc
 
